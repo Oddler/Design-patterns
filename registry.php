@@ -10,6 +10,10 @@ namespace sofw\core;
 
   trait soRegistry
   {
+
+    /**
+     * @var mixed[]
+     */
     protected $_aItems		= array();
 
     /**
