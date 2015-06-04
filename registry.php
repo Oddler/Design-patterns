@@ -17,13 +17,11 @@ namespace sofw\core;
     protected $_aItems		= array();
 
     /**
-     * Устанавливаем значение
+     * Устанавливаем значение по ключу
      *
-     * @param $sKey
+     * @param string $sKey
      * @param mixed $Value
      *
-     * @internal param $sKey1
-     * @internal param string $sKey
      * @return $this
      */
     public function set($sKey, $Value)
@@ -34,7 +32,7 @@ namespace sofw\core;
 	}
 
     /**
-     * Получаем значение
+     * Получаем значение по ключу
      *
      * @param string $sKey
      * @param mixed $DefValue
@@ -45,6 +43,20 @@ namespace sofw\core;
     {
       return isset($this->_aItems[$sKey])?$this->_aItems[$sKey]:$DefValue;
 	}
+
+    /**
+     * Удаляем значение по ключу
+     *
+     * @param string $sKey
+     *
+     * @return $this
+     */
+    public function set($sKey)
+    {
+      unset($this->_aItems[$sKey]);
+
+      return $this;
+    }
 
     /**
      * Переводим массив в реестор
