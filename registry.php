@@ -51,7 +51,7 @@ namespace sofw\core;
      *
      * @return $this
      */
-    public function set($sKey)
+    public function remove($sKey)
     {
       unset($this->_aItems[$sKey]);
 
